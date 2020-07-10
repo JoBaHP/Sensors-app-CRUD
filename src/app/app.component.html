@@ -1,0 +1,25 @@
+
+<!-- <a [routerLink]="['home']">Home</a>
+<a [routerLink]="['sensor-add']">Add</a>
+<a [routerLink]="['sensors']">View All</a> --> 
+
+<mat-toolbar color="primary" >
+    <span>
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu" [overlapTrigger]="false">
+        <button mat-menu-item (click)="goToMenu('home')">
+          <mat-icon>home</mat-icon>
+          <span>Home</span>
+        </button>
+        <button mat-menu-item (click)="goToMenu('sensors')">
+          <mat-icon>people_outline</mat-icon>
+          <span>Sensors List</span>
+        </button> 
+      </mat-menu>
+    </span>
+    <span class="spacer" (click)="goToMenu('home')" style="cursor: pointer">Sensors</span>
+  </mat-toolbar>
+ 
+<router-outlet></router-outlet>

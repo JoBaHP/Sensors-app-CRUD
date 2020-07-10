@@ -1,0 +1,52 @@
+<header style="padding-left: 10px;padding-top: 20px;"> 
+</header> 
+<section class="container" style="text-align: center;text-align: -moz-center;text-align: -webkit-center;">
+   <form style="width: 100%;height: 100%;" name="form" #f="ngForm" novalidate> 
+    <div style="max-width: 500px"> 
+     <div>
+         <mat-form-field class="formInput">
+             <input matInput  name="name" id="name" [(ngModel)]="sensor.name" #name="ngModel" required
+                    placeholder="name">  
+         </mat-form-field> 
+     </div> 
+     <div>
+         <mat-form-field class="formInput">
+             <input matInput  name="unitSymbol" id="unitSymbol" [(ngModel)]="sensor.unitSymbol" #unitSymbol="ngModel" required
+                    placeholder="Unit Symbol">  
+         </mat-form-field> 
+     </div> 
+     <div>
+         <mat-form-field class="formInput">
+             <input matInput  name="value" id="value" [(ngModel)]="sensor.value" #value="ngModel" required
+                    placeholder="Value">  
+         </mat-form-field> 
+     </div> 
+     <div>
+         <mat-form-field class="formInput">
+             <input matInput  name="type" id="type" [(ngModel)]="sensor.type" #type="ngModel" required
+                    placeholder="Type">  
+         </mat-form-field> 
+     </div> 
+     <div>
+         <mat-form-field class="formInput">
+             <input matInput type="date"  name="lastUpdate" id="lastUpdate" [(ngModel)]="sensor.lastUpdate" #lastUpdate="ngModel" required
+                    placeholder="Last Update">  
+         </mat-form-field> 
+     </div> 
+    </div> 
+    <div style="text-align: end;max-width: 500px;">
+         <img (click)="selectFile.click()" id="profile-img" class="profile-img-card"  
+              [src]="sensor.image!= null ? sensor.image : 'assets/images/upload.png'" >
+         <input #selectFile hidden type='file' accept="image/*" value="Browse" (change)="onSelectFile($event)"> 
+    </div>
+   </form>
+</section> 
+<div class="footer" style="text-align: center;text-align: -moz-center;text-align: -webkit-center"> 
+      <div style="max-width: 500px;text-align: left;"> 
+         <hr>     
+         <button id="Btnsave" style="height:28px;margin-left: 10px;width: 80px" (click)="saveClick()">Save  
+         </button> 
+         <button id="btnCancel" style="height:28px;margin-left: 10px;width: 80px" (click)="goToMenu('sensors')"> Cancel  
+         </button> 
+      </div> 
+</div>

@@ -1,0 +1,26 @@
+.example-card {
+  max-width: 250px;
+  min-width: 200px;
+  display: inline-block;
+  margin-left: 15px;
+  background: gainsboro;
+  margin-bottom: 10px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+  .header{ 
+    /* background: darkgray; */
+    margin-bottom: 10px; 
+    padding: 5px;
+    color: cornsilk;
+    font-weight: bold;
+    text-align: end;
+  }
+  .mat-card-image {
+    margin: 0 -16px 16px 25px;
+    width: 150px;
+    height: 150px;
+  }
